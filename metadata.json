@@ -1,0 +1,6 @@
+{
+  "name": "VELORA STUDIO — Architectural Luxury Fashion",
+  "description": "Independent contemporary luxury fashion house exploring architectural silhouettes, modern craftsmanship, and tactile materials.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

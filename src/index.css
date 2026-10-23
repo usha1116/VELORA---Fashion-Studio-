@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Italiana", serif;
+  --font-display: "Syne", sans-serif;
+  --font-tech: "Space Grotesk", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-obsidian: #0B0C10;
+  --color-canvas: #0F1016;
+  --color-surface: #151720;
+  --color-surface-hover: #1C1F2B;
+  --color-bone: #F5F2EB;
+  --color-ash: #9C9EAE;
+  --color-crimson: #853744;
+  --color-bronze: #C49774;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+::-webkit-scrollbar-thumb {
+  background: #252836;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #853744;
+}
+
+/* Typography Utility Classes */
+.font-syne {
+  font-family: var(--font-display);
+}
+.font-italiana {
+  font-family: var(--font-serif);
+}
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* Kinetic continuous ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle organic floating drift for key objects */
+@keyframes gentle-drift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+
+.animate-drift {
+  animation: gentle-drift 8s ease-in-out infinite;
+}
+
+.animate-drift-slow {
+  animation: gentle-drift 12s ease-in-out infinite reverse;
+}
+
+/* Breathing ambient glow */
+@keyframes ambient-glow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.28;
+    transform: scale(1.08);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambient-glow 10s ease-in-out infinite;
+}
+
+/* Unique Architectural Image Frames */
+.arch-frame {
+  border-radius: 120px 120px 12px 12px;
+  overflow: hidden;
+}
+
+.arch-frame-soft {
+  border-radius: 60px 60px 8px 8px;
+  overflow: hidden;
+}
+
+.asymmetric-cutout {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+}
+
+.editorial-glass {
+  background: rgba(21, 23, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle blueprint lines */
+.blueprint-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
